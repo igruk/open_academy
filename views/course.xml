@@ -35,7 +35,6 @@
                     <notebook>
                         <page string="Name">
                             <group>
-                                <field name="name"/>
                                 <field name="title"/>
                             </group>
                         </page>

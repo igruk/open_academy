@@ -5,8 +5,8 @@ from odoo.exceptions import ValidationError
 class Course(models.Model):
     _name = 'open_academy.course'
     _description = 'Course'
+    _rec_name = 'title'
 
-    name = fields.Char(required=True)
     title = fields.Char(required=True)
     description = fields.Text()
     responsible_user_id = fields.Many2one('res.users', string='Responsible User')
@@ -15,14 +15,14 @@ class Course(models.Model):
     _sql_constraints = [
         ('title_description', 'CHECK (title <> description)',
          'The course title and description must be different.'),
-        ('name_unique', 'UNIQUE (name)', 'The course name must be unique.')
+        ('title_unique', 'UNIQUE (title)', 'The course title must be unique.')
     ]
 
     def copy(self, default=None):
         self.ensure_one()
         if default is None:
             default = {}
-        default['name'] = f"Copy of {self.name}"
+        default['title'] = f"Copy of {self.title}"
         return super(Course, self).copy(default)
 
 

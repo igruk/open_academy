@@ -1,17 +1,14 @@
 <odoo>
     <data>
         <record id="course_1" model="open_academy.course">
-            <field name="name">Python</field>
             <field name="title">Introduction to Python</field>
             <field name="description">Learn the basics of Python programming language.</field>
         </record>
         <record id="course_2" model="open_academy.course">
-            <field name="name">Web</field>
             <field name="title">Web Development</field>
             <field name="description">Get started with web development using HTML, CSS, and JavaScript.</field>
         </record>
         <record id="course_3" model="open_academy.course">
-            <field name="name">SQL</field>
             <field name="title">Database Management</field>
             <field name="description">Explore the concepts of database management and SQL.</field>
         </record>
