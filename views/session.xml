@@ -51,7 +51,7 @@
         <field name="arch" type="xml">
             <graph string="Attendees by Course" type="bar">
                 <field name="course_id"/>
-                <field name="attendee_ids" type="measure"/>
+                <field name="taken_seats" type="measure"/>
             </graph>
         </field>
     </record>

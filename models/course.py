@@ -37,7 +37,7 @@ class Session(models.Model):
     instructor_id = fields.Many2one('res.partner', string='Instructor', domain=[('instructor', '=', False)])
     course_id = fields.Many2one('open_academy.course', string='Course', required=True)
     attendee_ids = fields.Many2many('res.partner', string='Attendees')
-    taken_seats = fields.Float(compute='_compute_taken_seats')
+    taken_seats = fields.Float(compute='_compute_taken_seats', store=True)
     active = fields.Boolean(default=True)
 
     @api.depends('seats', 'attendee_ids')
