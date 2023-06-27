@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="open_academy.session_wizard_form">
+        <field name="name">Session Wizard Form</field>
+        <field name="model">open_academy.session.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Session Wizard">
+                <group>
+                    <field name="session_ids"/>
+                    <field name="partner_ids"/>
+                </group>
+                <footer>
+                    <button string="Apply" type="object" name="apply_changes" class="btn-primary"/>
+                    <button string="Cancel" class="btn-default" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="open_academy.session_wizard_action">
+        <field name="name">Session Wizard</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">open_academy.session.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+</odoo>

@@ -71,6 +71,12 @@ class Session(models.Model):
             if session.instructor_id and session.instructor_id in session.attendee_ids:
                 raise ValidationError('The instructor cannot be an attendee of their own session.')
 
+    @api.constrains('seats', 'attendee_ids')
+    def _check_attendee_limit(self):
+        for session in self:
+            if len(session.attendee_ids) > session.seats:
+                raise ValidationError("Number of participants cannot exceed the number of seats.")
+
 
 class Partner(models.Model):
     _inherit = 'res.partner'

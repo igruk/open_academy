@@ -15,4 +15,10 @@
               action="open_academy.session_action"
               parent="open_academy.menu_root"
               sequence="2"/>
+
+    <menuitem id="open_academy.view_wizard"
+              name="Wizard"
+              action="open_academy.session_wizard_action"
+              parent="open_academy.menu_root"
+              sequence="3"/>
 </odoo>
