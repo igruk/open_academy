@@ -28,12 +28,12 @@
         'security/ir.model.access.csv',
         'security/security.xml',
         'wizard/wizard_view.xml',
-        # 'views/views.xml',
-        # 'views/templates.xml',
         'views/course.xml',
         'views/session.xml',
         'views/partner.xml',
         'views/menu.xml',
+        'report/report.xml',
+        'report/report_session.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
