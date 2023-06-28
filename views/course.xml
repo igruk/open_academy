@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record model="ir.actions.act_window" id="open_academy.course_action">
+
+    <record id="open_academy.course_action" model="ir.actions.act_window">
         <field name="name">Courses</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">open_academy.course</field>
@@ -13,7 +14,7 @@
         </field>
     </record>
 
-    <record model="ir.ui.view" id="open_academy.course_list">
+    <record id="open_academy.course_list" model="ir.ui.view">
         <field name="name">Course List</field>
         <field name="model">open_academy.course</field>
         <field name="arch" type="xml">
@@ -26,7 +27,7 @@
         </field>
     </record>
 
-    <record model="ir.ui.view" id="open_academy.course_form">
+    <record id="open_academy.course_form" model="ir.ui.view">
         <field name="name">Course Form</field>
         <field name="model">open_academy.course</field>
         <field name="arch" type="xml">
@@ -51,7 +52,7 @@
         </field>
     </record>
 
-    <record model="ir.ui.view" id="open_academy.course_search">
+    <record id="open_academy.course_search" model="ir.ui.view">
         <field name="name">Course Search</field>
         <field name="model">open_academy.course</field>
         <field name="arch" type="xml">
@@ -70,24 +71,4 @@
         </field>
     </record>
 
-
-<!--
-    <menuitem id="menu_course_python"
-              name="Introduction to Python"
-              action="action_open_academy_course"
-              parent="menu_course_master"
-              sequence="0"/>
-
-    <menuitem id="menu_course_web"
-              name="Web Development"
-              action="action_open_academy_course"
-              parent="menu_course_master"
-              sequence="1"/>
-
-    <menuitem id="menu_course_sql"
-              name="Database Management"
-              action="action_open_academy_course"
-              parent="menu_course_master"
-              sequence="2"/>
- -->
 </odoo>

@@ -41,8 +41,6 @@
         </field>
     </record>
 
-
-
     <record id="open_academy.dashboard_action" model="ir.actions.act_window">
         <field name="name">Dashboard</field>
         <field name="res_model">board.board</field>

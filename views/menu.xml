@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+
     <menuitem id="open_academy.menu_root"
               name="OpenAcademy"
               sequence="0"/>
@@ -21,4 +22,5 @@
               action="open_academy.session_wizard_action"
               parent="open_academy.menu_root"
               sequence="3"/>
+
 </odoo>

@@ -1,3 +1,5 @@
 # -*- coding: utf-8 -*-
 
-from . import models, course
+from . import course
+from . import session
+from . import res_partner
