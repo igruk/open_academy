@@ -21,7 +21,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'board'],
+    'depends': ['base', 'board', 'project'],
 
     # always loaded
     'data': [
@@ -32,6 +32,7 @@
         'views/session.xml',
         'views/partner.xml',
         'views/dashboard.xml',
+        'views/project_views.xml',
         'views/menu.xml',
         'report/report.xml',
         'report/report_session.xml',

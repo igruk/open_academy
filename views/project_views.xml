@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="project_form_view_inherited" model="ir.ui.view">
+        <field name="name">project.form.view.inherited</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project"/>
+        <field name="arch" type="xml">
+                <xpath expr="//field[@name='company_id']" position="before">
+                    <field name="limit_time"/>
+                    <field name="remaining_time"/>
+                </xpath>
+        </field>
+    </record>
+
+    <record id="project_kanban_view_inherited" model="ir.ui.view">
+        <field name="name">project.kanban.view.inherited</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.view_project_kanban"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@class='text-muted o_row']" position="after">
+                <div class="o_project_kanban_field">
+                    <div class="o_row">
+                        <span>Limit / Remaining - </span><field name="limit_time"/> / <field name="remaining_time"/>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
+
