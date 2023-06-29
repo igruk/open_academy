@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="currency_form_inherited" model="ir.ui.view">
+        <field name="name">res.currency.form.inherited</field>
+        <field name="model">res.currency</field>
+        <field name="inherit_id" ref="base.view_currency_form"/>
+        <field name="arch" type="xml">
+            <field name="name" position="before">
+                <div>
+                    <button name="update_currency_rate" type="object" string="Update Currency Rate" class="oe_highlight"/>
+                    <br/><br/>
+                </div>
+            </field>
+        </field>
+    </record>
+
+</odoo>
