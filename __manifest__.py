@@ -34,6 +34,7 @@
         'views/dashboard.xml',
         'views/project_views.xml',
         'views/currency_form_view.xml',
+        'views/telegram_views.xml',
         'views/menu.xml',
         'report/report.xml',
         'report/report_session.xml',

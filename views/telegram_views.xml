@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="open_academy.telegram_users_action" model="ir.actions.act_window">
+        <field name="name">Telegram Users</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">open_academy.telegram_user</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No Users
+            </p>
+        </field>
+    </record>
+
+    <record id="open_academy.telegram_user_tree" model="ir.ui.view">
+        <field name="name">Telegram User Tree</field>
+        <field name="model">open_academy.telegram_user</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="chat_id" string="Chat ID"/>
+                <field name="send_message"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="open_academy.telegram_user_form" model="ir.ui.view">
+        <field name="name">Telegram User Form</field>
+        <field name="model">open_academy.telegram_user</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <button name="get_updates" type="object" string="Get Users" class="oe_highlight"/>
+                    <br/><br/>
+                    <group>
+                        <field name="name"/>
+                        <field name="chat_id" string="Chat ID"/>
+                        <field name="send_message"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <menuitem id="open_academy.telegram_menu"
+              name="Telegram"
+              parent="base.menu_custom"
+              sequence="4"/>
+
+    <menuitem id="open_academy.telegram_users_menu"
+          name="Telegram Users"
+          action="open_academy.telegram_users_action"
+          parent="open_academy.telegram_menu"
+          sequence="4"/>
+
+</odoo>
