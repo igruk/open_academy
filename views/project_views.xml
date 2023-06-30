@@ -7,8 +7,8 @@
         <field name="inherit_id" ref="project.edit_project"/>
         <field name="arch" type="xml">
                 <xpath expr="//field[@name='company_id']" position="before">
-                    <field name="limit_time"/>
-                    <field name="remaining_time"/>
+                    <field name="limit_time" widget="timesheet_uom"/>
+                    <field name="remaining_time" widget="timesheet_uom"/>
                 </xpath>
         </field>
     </record>
@@ -21,7 +21,7 @@
             <xpath expr="//div[@class='text-muted o_row']" position="after">
                 <div class="o_project_kanban_field">
                     <div class="o_row">
-                        <span>Limit / Remaining - </span><field name="limit_time"/> / <field name="remaining_time"/>
+                        <span>Limit / Remaining - </span><field name="limit_time" widget="timesheet_uom"/> / <field name="remaining_time" widget="timesheet_uom"/>
                     </div>
                 </div>
             </xpath>
