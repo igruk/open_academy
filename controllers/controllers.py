@@ -1,21 +1,25 @@
-# -*- coding: utf-8 -*-
-# from odoo import http
+from odoo import http
+from odoo.http import request
 
 
-# class OpenAcademy(http.Controller):
-#     @http.route('/open_academy/open_academy', auth='public')
-#     def index(self, **kw):
-#         return "Hello, world"
+class AddNewLeadController(http.Controller):
 
-#     @http.route('/open_academy/open_academy/objects', auth='public')
-#     def list(self, **kw):
-#         return http.request.render('open_academy.listing', {
-#             'root': '/open_academy/open_academy',
-#             'objects': http.request.env['open_academy.open_academy'].search([]),
-#         })
+    @http.route('/add_new_lead', type='http', auth="public", methods=['POST'], website=True, csrf=False)
+    def add_new_lead(self, **post):
+        client_name = post.get('client_name')
+        client_email = post.get('client_email')
+        client_phone = post.get('client_phone')
+        subject = post.get('subject')
 
-#     @http.route('/open_academy/open_academy/objects/<model("open_academy.open_academy"):obj>', auth='public')
-#     def object(self, obj, **kw):
-#         return http.request.render('open_academy.object', {
-#             'object': obj
-#         })
+        # Create new lead record
+        lead = request.env['crm.lead']
+        lead_data = {
+            'name': client_name,
+            'email_from': client_email,
+            'phone': client_phone,
+            'description': subject,
+        }
+        new_lead = lead.create(lead_data)
+
+        return "Lead Created Successfully"
+
