@@ -21,7 +21,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'board', 'project'],
+    'depends': ['base', 'board', 'project', 'sale'],
 
     # always loaded
     'data': [
@@ -35,6 +35,7 @@
         'views/project_views.xml',
         'views/currency_form_view.xml',
         'views/telegram_views.xml',
+        'views/sale_views.xml',
         'views/menu.xml',
         'report/report.xml',
         'report/report_session.xml',
