@@ -38,6 +38,9 @@
                             <group>
                                 <field name="title"/>
                             </group>
+                            <group>
+                                <field name="picture" widget="image"/>
+                            </group>
                         </page>
                         <page string="Description">
                             <group>
