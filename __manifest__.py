@@ -21,13 +21,14 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'board', 'project', 'sale', 'website'],
+    'depends': ['base', 'board', 'project', 'sale', 'website', 'contacts'],
 
     # always loaded
     'data': [
         'security/ir.model.access.csv',
         'security/security.xml',
         'wizard/wizard_view.xml',
+        'wizard/contact_wizard_views.xml',
         'views/course.xml',
         'views/session.xml',
         'views/partner.xml',

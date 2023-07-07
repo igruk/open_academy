@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="contacts_wizard_form" model="ir.ui.view">
+            <field name="name">contacts.wizard.form</field>
+            <field name="model">contacts.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Contact Wizard">
+                    <group>
+                        <field name="excel_file" filename="excel_file"/>
+                    </group>
+                    <footer>
+                        <button string="Create Contacts" name="create_contacts" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="contacts_wizard_action" model="ir.actions.act_window">
+            <field name="name">Contact Wizard</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">contacts.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="menu_partner_wizard"
+                  action="contacts_wizard_action"
+                  name="Import from Excel" parent="contacts.res_partner_menu_config"
+                  sequence="4"/>
+
+    </data>
+</odoo>
