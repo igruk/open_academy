@@ -4,11 +4,7 @@ from odoo.http import request
 from odoo.exceptions import ValidationError
 
 
-class CustomWebsiteSale(WebsiteSale):
-    @http.route('/shop/address', type='http', auth="public", website=True)
-    def checkout(self, **post):
-        return super(CustomWebsiteSale, self).checkout(**post)
-
+class WebsiteSale(WebsiteSale):
     def checkout_form_validate(self, mode, all_form_values, data):
         # mode: tuple ('new|edit', 'billing|shipping')
         # all_form_values: all values before preprocess
