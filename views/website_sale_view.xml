@@ -1,0 +1,41 @@
+<odoo>
+    <template id="address_b2b2" inherit_id="website_sale.address" name="Hide address fields">
+        <xpath expr="//label[@for='street']" position="replace">
+        </xpath>
+        <xpath expr="//input[@name='street']" position="replace">
+        </xpath>
+
+        <xpath expr="//label[@for='street2']" position="replace">
+        </xpath>
+        <xpath expr="//input[@name='street2']" position="replace">
+        </xpath>
+
+        <xpath expr="//label[@for='city']" position="replace">
+        </xpath>
+        <xpath expr="//input[@name='city']" position="replace">
+        </xpath>
+
+        <xpath expr="//label[@for='zip']" position="replace">
+        </xpath>
+        <xpath expr="//input[@name='zip']" position="replace">
+        </xpath>
+
+        <xpath expr="//label[@for='zip']" position="replace">
+        </xpath>
+        <xpath expr="//input[@name='zip']" position="replace">
+        </xpath>
+
+        <xpath expr="//label[@for='country_id']" position="replace">
+        </xpath>
+        <xpath expr="//select[@name='country_id']" position="replace">
+        </xpath>
+
+        <xpath expr="//label[@for='state_id']" position="replace">
+        </xpath>
+        <xpath expr="//select[@name='state_id']" position="replace">
+        </xpath>
+
+        <xpath expr="//div[@class='checkbox']" position="replace">
+        </xpath>
+    </template>
+</odoo>

@@ -63,17 +63,17 @@ class TelegramUser(models.Model):
         requests.post(api_endpoint, data)
 
 
-class CrmLead(models.Model):
-    _inherit = 'crm.lead'
-
-    @api.model
-    def create(self, vals):
-        lead_name = vals.get('name', '')
-        telegram_users = self.env['open_academy.telegram_user']
-        chat_ids = telegram_users.get_chat_ids()
-        text = f'New Lead Created: {lead_name}'
-
-        for user in chat_ids:
-            telegram_users.send_telegram_message(user, text)
-
-        return super(CrmLead, self).create(vals)
+# class CrmLead(models.Model):
+#     _inherit = 'crm.lead'
+#
+#     @api.model
+#     def create(self, vals):
+#         lead_name = vals.get('name', '')
+#         telegram_users = self.env['open_academy.telegram_user']
+#         chat_ids = telegram_users.get_chat_ids()
+#         text = f'New Lead Created: {lead_name}'
+#
+#         for user in chat_ids:
+#             telegram_users.send_telegram_message(user, text)
+#
+#         return super(CrmLead, self).create(vals)

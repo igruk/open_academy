@@ -38,6 +38,7 @@
         'views/telegram_views.xml',
         'views/sale_views.xml',
         'views/menu.xml',
+        'views/website_sale_view.xml',
         'report/report.xml',
         'report/report_session.xml',
     ],
